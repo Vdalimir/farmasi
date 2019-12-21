@@ -159,6 +159,7 @@
     <div class="container text-center">
         <h1>АКЦИЯ</h1>
         <p class="text-red mt-10">красивый старт</p>
+        <p>asas</p>
     </div>
 </section>
 <script src="js/jquery-3.4.1.min.js"></script>
