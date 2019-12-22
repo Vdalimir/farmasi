@@ -84,7 +84,7 @@ header {
     display: block;
     z-index: 10000;
 }
-#scene{
+.scene {
     position: absolute;
     left: 35%;
     bottom: 100px;

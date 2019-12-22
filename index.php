@@ -42,7 +42,7 @@
         <img src="img/imghero.jpg" alt="">
     </div>
     <div class="hero-text">
-        <div id="scene">
+        <div id="scene" class="scene">
             <div data-depth="1"><img src="img/abstract.png" alt=""/></div>
         </div>
         <div class="container">
