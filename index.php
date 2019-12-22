@@ -216,46 +216,6 @@
         </div>
     </div>
 </section>
-<section class="stock">
-    <div class="container">
-        <div class="text-center">
-            <h1>АКЦИЯ</h1>
-            <p class="text-red mt-10">красивый старт</p>
-        </div>
-
-
-        <div class="stock_block">
-            <div id="stock-scene-abstr">
-                <img src="img/stockabstr.png"/>
-            </div>
-            <div class="stock-text">
-                <p>Постоянные действующие акции
-                    для тех, кто только
-                    зарегистрировался.
-                    <br>
-                    <br>
-                    <span>Подарки 4 месяца подряд.</span></p>
-            </div>
-            <div class="stock-images">
-                <div class="text-center" id="stock-scene">
-                    <div data-depth="0.6" class="stock-img img1">
-                        <div>
-                            <img src="img/pomada2.png"/>
-                        </div>
-
-                    </div>
-                    <div data-depth="0.6" class="stock-img img2">
-                        <img src="img/brash2.png"/>
-                    </div>
-                    <div data-depth="1" class="stock-img img3">
-                        <img src="img/glam.png"/>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/jquery.scroolly.min.js"></script>
 <script src="js/parallax.js"></script>
@@ -264,8 +224,6 @@
 <script type="text/javascript">
     var scene = new Parallax(document.getElementById('scene'));
     var scene = new Parallax(document.getElementById('stock-scene'));
-
-
 </script>
 </body>
 </html>
