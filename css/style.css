@@ -302,11 +302,20 @@ section.about h1:before{
 /* CATALOG */
 .catalog {
     overflow: hidden;
+    height: 100vh;
 }
 #catalog-scene {
     position: absolute;
     width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
+#catalog-scene div {
+    position: absolute;
+}
+
 #catalog-scene img{
     width: 100%;
 }
