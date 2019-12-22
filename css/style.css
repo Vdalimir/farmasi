@@ -78,11 +78,6 @@ header {
 .hero-text p{
     color: white;
     font-size: 32px;
-    z-index: 100;
-}
-#hero-text{
-    display: block;
-    z-index: 10000;
 }
 .scene {
     position: absolute;
@@ -260,19 +255,61 @@ section.about h1:before{
 }
 
 /* STOCK */
-
+.stock {
+    padding-bottom: 100px;
+    overflow: hidden;
+}
 .stock_block {
     position: relative;
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 100px;
 }
 .stock-text {
     grid-column: span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 100;
+}
+.stock-text span {
+    font-weight: bold;
 }
 .stock-images {
     grid-column: span 1;
 }
+#stock-scene-abstr {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    z-index: 1;
+}
 
+.stock-img div{
+    top: 150px;
+}
+.stock-img.img1  img{
+    width: 100%;
+}
+.stock-img.img3 img{
+    width: 75%;
+}
+.stock-img.img2 img{
+    width: 100%;
+}
+
+/* CATALOG */
+.catalog {
+    overflow: hidden;
+}
+#catalog-scene {
+    position: absolute;
+    width: 100%;
+}
+#catalog-scene img{
+    width: 100%;
+}
 @media (min-width: 1200px){
     .container {
         max-width: 1140px;
@@ -319,6 +356,14 @@ section.about h1:before{
     }
     .hero-text {
         align-items: baseline;
+    }
+    .stock-text {
+        grid-column: span 2;
+        padding: 15px;
+    }
+    .stock-images{
+        grid-column: span 2;
+        margin-top: 50px;
     }
 
     /* NAV */
