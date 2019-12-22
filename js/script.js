@@ -5,6 +5,7 @@ $( document ).ready(function() {
         $(this).find('div').toggleClass("toggle");
     });
     $(".owl-carousel").owlCarousel({
+        loop: true,
         items:1,
         autoplay:true,
         autoplayTimeout:4000,
@@ -16,13 +17,11 @@ $( document ).ready(function() {
             from: 'con-top -1000',
             to: 'con-top',
             cssFrom: {
-                width: '150%',
-                transform: 'rotate(-90deg)',
+                top: '1%',
                 opacity: '0.0'
             },
             cssTo:{
-                width: '100%',
-                transform: 'rotate(0deg)',
+                top: '50%',
                 opacity: '1'
             }
         }
@@ -32,11 +31,11 @@ $( document ).ready(function() {
             from: 'con-top -1000',
             to: 'con-top',
             cssFrom: {
-                transform: 'rotate(90deg)',
+                top: '100%',
                 opacity: '0.0'
             },
             cssTo:{
-                transform: 'rotate(0deg)',
+                top: '50%',
                 opacity: '1'
             }
         }

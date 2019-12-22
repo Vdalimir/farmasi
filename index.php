@@ -158,7 +158,7 @@
     <div class="container">
         <div class="text-center">
             <h1>АКЦИЯ</h1>
-            <p class="text-red mt-10">красивый старт</p>
+            <p class="text-red mt-15">красивый старт</p>
         </div>
 
 
@@ -172,7 +172,8 @@
                     зарегистрировался.
                     <br>
                     <br>
-                    <span>Подарки 4 месяца подряд.</span></p>
+                    <span>Подарки 4 месяца подряд.</span>
+                </p>
             </div>
             <div class="stock-images">
                 <div class="text-center" id="stock-scene">
@@ -197,7 +198,7 @@
 <section class="catalog">
 
     <div id="catalog-scene" class="catalog-scene">
-        <div id="scrollimg1" class="scrollimg">
+        <div id="scrollimg1">
             <img src="img/redline.png">
         </div>
         <div id="scrollimg2">
@@ -207,13 +208,45 @@
     <div class="container">
         <div class="text-center">
             <h1>КАТАЛОГ</h1>
-            <p class="text-red mt-10">пользуйтесь актуальными предложениями и акциями</p>
+            <p class="text-red mt-15">пользуйтесь актуальными предложениями и акциями</p>
         </div>
-        <div class="catalog-block text-center mt-20">
+        <div class="catalog-block text-center">
             <div class="img-catalog">
-                <img src="img/001.jpg" width="50%"/>
+                <p>обновления каждый месяц</p>
+                <img src="img/001.jpg"/>
+                <a href="#" class="downloadCat">скачать PDF файл</a>
             </div>
         </div>
+    </div>
+</section>
+<section class="marketing">
+    <div id="marketing-scene">
+        <div data-depth="1">
+            <img src="img/cubes.png">
+        </div>
+    </div>
+    <div class="container">
+        <div class="marketing-text text-center">
+            <h1>МАРКЕТИНГ ПЛАН</h1>
+            <p class="text-red mt-15">цифры которые ведут к успеху</p>
+        </div>
+        <div class="block-marketing">
+            <div class="marketing-image">
+                <img src="img/imgmarketing.jpg"/>
+            </div>
+            <div class="marketing-block-text">
+                <h2>СКИДКА КОНСУЛЬТАНТА</h2>
+                <p>Зарегистрируйся в компании и сразу получай максимальные скидки на всю продукцию
+                </p>
+                <p>до <span>30%</span></p>
+                <div class="marketing-link">нажмите что бы посмотреть <a href="#">маркетинг план</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="registration">
+    <div class="container">
+
     </div>
 </section>
 <script src="js/jquery-3.4.1.min.js"></script>
@@ -224,6 +257,7 @@
 <script type="text/javascript">
     var scene = new Parallax(document.getElementById('scene'));
     var scene = new Parallax(document.getElementById('stock-scene'));
+    var scene = new Parallax(document.getElementById('marketing-scene'));
 </script>
 </body>
 </html>
