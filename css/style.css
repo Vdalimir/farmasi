@@ -262,6 +262,18 @@ section.about h1:before{
 
 /* STOCK */
 
+.stock_block {
+    position: relative;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+}
+.stock-text {
+    grid-column: span 1;
+}
+.stock-images {
+    grid-column: span 1;
+}
+
 @media (min-width: 1200px){
     .container {
         max-width: 1140px;

@@ -159,6 +159,11 @@
     <div class="container text-center">
         <h1>АКЦИЯ</h1>
         <p class="text-red mt-10">красивый старт</p>
+
+        <div class="stock_block">
+            <div class="stock-text"></div>
+            <div class="stock-images"></div>
+        </div>
     </div>
 </section>
 <script src="js/jquery-3.4.1.min.js"></script>
