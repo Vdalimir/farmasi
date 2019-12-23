@@ -29,6 +29,9 @@ html {
 .mt-20 {
     margin-top: 20px;
 }
+.mt-30 {
+    margin-top: 30px;
+}
 
 .text-center {
     text-align: center;
@@ -527,6 +530,7 @@ section.about h1:before {
     grid-column: span 1;
 }
 .block-form {
+    position: relative;
     max-width: 600px;
     background-color: white;
     box-shadow: black 0 3px 20px;
@@ -573,6 +577,65 @@ section.about h1:before {
     background-color: #ff3331;
     color: white;
     box-shadow: black 0 3px 6px;
+}
+
+.mui-btn[disabled], .mui-btn[disabled], .mui-btn[disabled]{
+    color: #888888;
+    background-color: rgba(255, 51, 49, 0.5);
+    box-shadow: black 0 3px 6px;
+}
+.mui-btn[disabled]:active, .mui-btn[disabled]:focus, .mui-btn[disabled]:hover{
+    color: #888888;
+    background-color: rgba(255, 51, 49, 0.5);
+    box-shadow: black 0 3px 6px;
+}
+
+label#user_mail-error{
+    top: -20px;
+    padding: 2px;
+    line-height: inherit;
+    font-size: 12px;
+}
+label#first_name-error.error{
+    top: -20px;
+    padding: 2px;
+    line-height: inherit;
+    font-size: 12px;
+}
+label#user_phone-error.error{
+    top: -20px;
+    padding: 2px;
+    line-height: inherit;
+    font-size: 12px;
+}
+
+.form-send-preload {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    transition: all 0.3s;
+}
+.form-send-preload .form-preload{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.form-send-success {
+    padding: 20px 0;
+    display: none;
+    justify-content: center;
+}
+.form-send-error {
+    padding: 20px 0;
+    display: none;
+    justify-content: center;
 }
 
 /* CONTACTS */

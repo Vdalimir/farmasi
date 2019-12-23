@@ -155,7 +155,7 @@ session_start();
         </div>
     </div>
 </section>
-<section id="stock"class="stock">
+<section id="stock" class="stock">
     <div class="container">
         <div class="text-center">
             <h1>АКЦИЯ</h1>
@@ -197,7 +197,7 @@ session_start();
         </div>
     </div>
 </section>
-<section id="catalog"class="catalog">
+<section id="catalog" class="catalog">
 
     <div id="catalog-scene" class="catalog-scene">
         <div id="scrollimg1">
@@ -221,7 +221,7 @@ session_start();
         </div>
     </div>
 </section>
-<section id="marketing"class="marketing">
+<section id="marketing" class="marketing">
     <div id="marketing-scene">
         <div data-depth="1">
             <img src="img/cubes.png" alt=""/>
@@ -246,7 +246,7 @@ session_start();
         </div>
     </div>
 </section>
-<section id="registration"class="registration">
+<section id="registration" class="registration">
     <div class="container-fluid">
         <div class="block-reg">
 
@@ -262,21 +262,41 @@ session_start();
                 <div class="block-form">
                     <p class="text-reg">Быстрая регистрация</p>
                     <p class="text-manager mt-20">менеджер онлайн <i class="fad fa-circle text-green"></i></p>
-                    <form class="mui-form" method="post" action="sendmail.php">
-                        <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text" name="first_name">
+                    <form class="mui-form" id="form_registration">
+                        <div class="mui-textfield mui-textfield--float-label mt-30">
+                            <input type="text" id="first_name" name="first_name" required>
                             <label>Ваше имя</label>
                         </div>
-                        <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text" name="user_mail">
+                        <div class="mui-textfield mui-textfield--float-label mt-30">
+                            <input type="email" id="user_mail" name="user_mail" required>
                             <label>Email</label>
                         </div>
-                        <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text" name="user_phone">
+                        <div class="mui-textfield mt-30">
+                            <input type="text" id="user_phone" name="user_phone" required>
                             <label>Мобильный номер</label>
                         </div>
-                        <button type="submit" class="mui-btn mui-btn--raised" name="start_reg">Отправить заявку<br><span>бесплатно</span></button>
+                        <input type="button" id="start_registration"
+                               class="mui-btn mui-btn--raised" name="start_registration"
+                               value="Отправить заявку" disabled="disabled"/>
                     </form>
+                    <div class="form-send-preload text-center">
+                        <div class="form-preload">
+                            <i class="fad fa-sync-alt fa-spin fa-3x text-blue"></i>
+                        </div>
+                    </div>
+                    <div class="form-send-error text-center">
+                        <h3 class="text-red">
+                            <i class="fad fa-frown fa-2x"></i>
+                            <br>
+                            Извините, что то пошло не так. Попробуйте пожалуйста позже или позвоните по указанным номерам в разделе контакты.</h3>
+                    </div>
+                    <div class="form-send-success text-center">
+                        <h3 class="mui--text-black">
+                            <i class="fad fa-check mui--text-accent fa-2x"></i>
+                            <br>
+                            Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.</h3>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -329,6 +349,8 @@ session_start();
 </footer>
 <a href="#" class="link-to-top"><i class="fad fa-arrow-alt-to-top fa-2x text-red"></i></a>
 <script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/mui.min.js"></script>
 <script src="js/jquery.scroolly.min.js"></script>
 <script src="js/parallax.js"></script>

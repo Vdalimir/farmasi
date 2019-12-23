@@ -40,4 +40,74 @@ $( document ).ready(function() {
             }
         }
     ], $('.catalog'));
+
+    $('#user_phone').mask('+00 (000) 000 00 00', {placeholder: "+__ (___) ___ __ __"});
+
+    $.extend( $.validator.messages, {
+        required: "Это поле необходимо заполнить.",
+        remote: "Пожалуйста, введите правильное значение.",
+        email: "Пожалуйста, введите корректный email.",
+        number: "Пожалуйста, введите число.",
+        digits: "Пожалуйста, вводите только цифры.",
+        maxlength: $.validator.format( "Пожалуйста, введите не больше {0} символов." ),
+        minlength: $.validator.format( "Пожалуйста, введите не меньше {0} символов." ),
+        rangelength: $.validator.format( "Пожалуйста, введите значение длиной от {0} до {1} символов." ),
+        range: $.validator.format( "Пожалуйста, введите число от {0} до {1}." ),
+        max: $.validator.format( "Пожалуйста, введите число, меньшее или равное {0}." ),
+        min: $.validator.format( "Пожалуйста, введите число, большее или равное {0}." )
+    } );
+    $('#form_registration').validate({
+        rules: {
+            first_name: {
+                required: true
+            },
+            user_mail: {
+                required: true,  // <-- redundant
+                email: true     // <-- redundant
+            },
+            user_phone: {
+                required: true,
+                minlength: 10
+            }
+        }
+    });
+    $('#form_registration input').on('keyup change', function () { // fires on every keyup & blur
+        if ($('#form_registration').valid()) {                   // checks form for validity
+            $('#start_registration').prop('disabled', false);        // enables button
+        } else {
+            $('#start_registration').prop('disabled', 'disabled');   // disables button
+        }
+    });
+
+    $('#start_registration').click( function () {
+        var firstName = $('#first_name').val();
+        var userMail = $('#user_mail').val();
+        var phoneNumber = $('#user_phone').val();
+        $('.form-send-preload').fadeIn(100);
+        $.ajax({
+            type: 'POST',
+            url: 'sendmail.php',
+            data: {first_name: firstName, user_mail: userMail,
+                user_phone: phoneNumber},
+            success: function (data) {
+                if (data === "1"){
+                    $('.form-send-preload').fadeOut(100);
+                    $('.mui-form').fadeOut(100);
+                    $('.form-send-success').delay(100).fadeIn(500);
+                } else {
+                    $('#first_name').val("");
+                    $('#user_email').val("");
+                    $('#user_phone').val("");
+                    $('.form-send-preload').fadeOut(100);
+                    $('.mui-form').fadeOut(100);
+                    $('.form-send-error').delay(100).fadeIn(500);
+                    setTimeout(function () {
+                        $('.form-send-error').fadeOut(500);
+                        $('.mui-form').fadeIn(500);
+                    },5000);
+
+                }
+            }
+        });
+    });
 });
