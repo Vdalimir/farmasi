@@ -4,7 +4,7 @@ if(isset($_POST['start_reg'])){
     $userMail = $_POST['user_mail'];
     $userPhone = $_POST['user_phone'];
 
-    echo $firstName. " + " . $userMail;
+    echo "<h1>".$firstName. " + " . $userMail."</h1>";
     /*$mailTo = "info@ua-farmasi.com, vladimir.hrinin@gmail.com";
     $subject = "Заявка на консультацию";
     $message = $firstName . " оставил сообщение: Хочу получить консультацию.\r\nМой номер ".$userPhone." , \r\nи моя почта ".$userMail;
@@ -18,4 +18,7 @@ if(isset($_POST['start_reg'])){
     }else {
         echo "Письмо не отправлено. качай дальше";
     }*/
+}
+else{
+    echo "Balda";
 }
