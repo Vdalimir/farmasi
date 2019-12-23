@@ -71,7 +71,10 @@ header {
     width: 100%;
     height: 100vh;
 }
-
+.container-fluid {
+    width: 100%;
+    padding: 0 15px;
+}
 .container {
     width: 100%;
     margin: 0 auto;
@@ -319,7 +322,20 @@ section.about h1:before {
     font-size: 24px;
     z-index: 100;
 }
-
+.stock-text a{
+    color: white;
+    font-size: 16px;
+    display: block;
+    background-color: #D22E2C;
+    width: 260px;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.stock-text a:hover{
+    background-color: #ff3331;
+}
 .stock-text span {
     font-weight: bold;
 }
@@ -463,7 +479,137 @@ section.about h1:before {
     top: 200px;
 }
 #marketing-scene img{
+    width: 50%;
+}
 
+/* REGISTRATION */
+.registration {
+    padding: 100px 0;
+    overflow: hidden;
+}
+.block-reg {
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+}
+.reg-img{
+    z-index: 1;
+}
+
+.reg-img img{
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
+.header-reg {
+    padding: 100px 0;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+.form-reg {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.form-reg div{
+    width: 100%;
+    grid-column: span 1;
+}
+.block-form {
+    max-width: 600px;
+    background-color: white;
+    box-shadow: black 0 3px 20px;
+    padding: 100px 50px;
+}
+.block-form .text-reg{
+    color: #212121;
+    font-size: 32px;
+}
+.text-manager {
+    color: #212121;
+}
+.text-manager i{
+    color: #53d250;
+}
+.block-form form{
+    margin-top: 100px;
+}
+.mui-textfield>input:focus, .mui-textfield>textarea:focus {
+    border-color: #212121;
+}
+.mui-textfield>input:focus~label, .mui-textfield>textarea:focus~label {
+    color: #212121;
+}
+.mui-textfield--float-label>label {
+    color: rgba(0, 0, 0, 0.5);
+}
+.mui-btn--fab, .mui-btn--raised {
+    line-height: normal;
+    height: 52px;
+    padding: 0 35px;
+    display: block;
+    margin: 50px auto 0;
+    background-color: #D22E2C;
+    color: white;
+    box-shadow: black 0 3px 6px;
+}
+.mui-btn--fab, .mui-btn--raised span{
+    text-transform: none;
+    font-size: 9px;
+    color: white;
+}
+.mui-btn:active, .mui-btn:focus, .mui-btn:hover{
+    background-color: #ff3331;
+    color: white;
+    box-shadow: black 0 3px 6px;
+}
+
+/* CONTACTS */
+.contacts {
+    margin-top: 150px;
+}
+.contacts-block {
+    padding: 100px 0;
+    margin-top: 100px;
+    background: url("../img/contacts.jpg") no-repeat right center;
+}
+.contacts-item {
+    width: 80%;
+    background-color: rgba(210, 46, 44, 0.9);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));;
+    padding: 100px 20px;
+}
+.contacts-item .item {
+    margin: 20px 0;
+}
+.contacts-item .item p{
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+.contacts-item .item a{
+    display: block;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.social-item {
+    display: flex;
+    background-color: rgba(210, 46, 44, 0.9);
+    padding: 20px 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.social-item .item a{
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    padding: 100px 10px;
 }
 @media (min-width: 1200px) {
     .container {
@@ -570,6 +716,9 @@ section.about h1:before {
         padding: 50px;
         top: 0;
     }
+    .form-reg div {
+        grid-column: span 2;
+    }
 
 }
 
@@ -602,6 +751,12 @@ section.about h1:before {
 
     .scene {
         left: 0;
+    }
+    .block-form {
+        padding: 100px 15px;
+    }
+    .contacts-item {
+        width: 100%;
     }
 
 }

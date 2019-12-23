@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/duotone.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/mui-noglobals.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -50,11 +51,9 @@
                 <h1>
                     FARMASI
                 </h1>
-                <p>НАЧНИ БИЗНЕС<br>СЕГОДНЯ</p>
+                <p>ДОСТУПНАЯ КОСМЕТИКА</p>
             </div>
-
         </div>
-    </div>
     </div>
 </header>
 <section class="about">
@@ -164,7 +163,7 @@
 
         <div class="stock_block">
             <div id="stock-scene-abstr">
-                <img src="img/stockabstr.png"/>
+                <img src="img/stockabstr.png" alt=""/>
             </div>
             <div class="stock-text">
                 <p>Постоянные действующие акции
@@ -173,21 +172,22 @@
                     <br>
                     <br>
                     <span>Подарки 4 месяца подряд.</span>
+                    <a href="#">Быстрая регистрация</a>
                 </p>
             </div>
             <div class="stock-images">
                 <div class="text-center" id="stock-scene">
                     <div data-depth="0.6" class="stock-img img1">
                         <div>
-                            <img src="img/pomada2.png"/>
+                            <img src="img/pomada2.png" alt=""/>
                         </div>
 
                     </div>
                     <div data-depth="0.6" class="stock-img img2">
-                        <img src="img/brash2.png"/>
+                        <img src="img/brash2.png" alt=""/>
                     </div>
                     <div data-depth="1" class="stock-img img3">
-                        <img src="img/glam.png"/>
+                        <img src="img/glam.png" alt=""/>
                     </div>
 
                 </div>
@@ -199,10 +199,10 @@
 
     <div id="catalog-scene" class="catalog-scene">
         <div id="scrollimg1">
-            <img src="img/redline.png">
+            <img src="img/redline.png" alt=""/>
         </div>
         <div id="scrollimg2">
-            <img src="img/whiteline.png">
+            <img src="img/whiteline.png" alt=""/>
         </div>
     </div>
     <div class="container">
@@ -213,7 +213,7 @@
         <div class="catalog-block text-center">
             <div class="img-catalog">
                 <p>обновления каждый месяц</p>
-                <img src="img/001.jpg"/>
+                <img src="img/001.jpg" alt=""/>
                 <a href="#" class="downloadCat">скачать PDF файл</a>
             </div>
         </div>
@@ -222,7 +222,7 @@
 <section class="marketing">
     <div id="marketing-scene">
         <div data-depth="1">
-            <img src="img/cubes.png">
+            <img src="img/cubes.png" alt=""/>
         </div>
     </div>
     <div class="container">
@@ -232,7 +232,7 @@
         </div>
         <div class="block-marketing">
             <div class="marketing-image">
-                <img src="img/imgmarketing.jpg"/>
+                <img src="img/imgmarketing.jpg" alt=""/>
             </div>
             <div class="marketing-block-text">
                 <h2>СКИДКА КОНСУЛЬТАНТА</h2>
@@ -245,11 +245,88 @@
     </div>
 </section>
 <section class="registration">
-    <div class="container">
+    <div class="container-fluid">
+        <div class="block-reg">
+
+            <div class="reg-img">
+                <img src="img/bgreg.png" alt=""/>
+            </div>
+            <div class="header-reg">
+                <h1>РЕГИСТРАЦИЯ</h1>
+                <p class="mt-20">ПОЛУЧИ СКИКУ УЖЕ СЕГОДНЯ В 1 КЛИК!</p>
+            </div>
+            <div class="form-reg">
+                <div></div>
+                <div class="block-form">
+                    <p class="text-reg">Быстрая регистрация</p>
+                    <p class="text-manager mt-20">менеджер онлайн <i class="fad fa-circle text-green"></i></p>
+                    <form class="mui-form">
+                        <div class="mui-textfield mui-textfield--float-label">
+                            <input type="text">
+                            <label>Ваше имя</label>
+                        </div>
+                        <div class="mui-textfield mui-textfield--float-label">
+                            <input type="text">
+                            <label>Email</label>
+                        </div>
+                        <div class="mui-textfield mui-textfield--float-label">
+                            <input type="text">
+                            <label>Мобильный номер</label>
+                        </div>
+                        <button type="submit" class="mui-btn mui-btn--raised">Отправить заявку<br><span>бесплатно</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contacts">
+    <div class="contact-header text-center">
+        <h1>СВЯЖИТЕСЬ С НАМИ</h1>
+        <p class="text-red mt-20">остались вопросы?</p>
+    </div>
+    <div class="contacts-block">
+        <div class="contacts-item">
+            <div class="item">
+                <p>Позвоните нам</p>
+                <a href="#">+380666753454</a>
+                <a href="#">+380975359047</a>
+            </div>
+            <div class="item">
+                <p>Напишите нам</p>
+                <a href="#">info@farmasi.com</a>
+                <a href="#">ofisfarmasikariuk@gmail.com</a>
+            </div>
+            <div class="item">
+                <p>Найдите нас</p>
+                <a href="#">
+                    Полтава, Украина
+                    <br>ул. Черновола, дом 20
+                </a>
+            </div>
+            <div class="social-item">
+                <div class="item">
+                    <a href="#"><i class="fab fa-telegram-plane fa-2x"></i></a>
+                </div>
+                <div class="item">
+                    <a href="#"><i class="fab fa-viber fa-2x"></i></a>
+                </div>
+                <div class="item">
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+                <div class="item">
+                    <a href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
 
     </div>
 </section>
+<footer>
+    <p class="text-center">2019 © Сайт представителя компании Farmasi Украина</p>
+</footer>
 <script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/mui.min.js"></script>
 <script src="js/jquery.scroolly.min.js"></script>
 <script src="js/parallax.js"></script>
 <script src="js/owl.carousel.min.js"></script>
