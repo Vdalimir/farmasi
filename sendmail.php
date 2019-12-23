@@ -13,8 +13,8 @@ if(isset($_POST['start_reg'])){
 
 
     if(mail($mailTo,$subject,$message, $headers)){
-        echo true;
+        echo "Письмо отправлено";
     }else {
-        echo false;
+        echo "Письмо не отправлено";
     }
 }

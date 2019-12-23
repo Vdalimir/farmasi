@@ -262,7 +262,7 @@ session_start();
                 <div class="block-form">
                     <p class="text-reg">Быстрая регистрация</p>
                     <p class="text-manager mt-20">менеджер онлайн <i class="fad fa-circle text-green"></i></p>
-                    <form class="mui-form">
+                    <form class="mui-form" action="sendmail.php">
                         <div class="mui-textfield mui-textfield--float-label">
                             <input type="text" name="first_name">
                             <label>Ваше имя</label>
