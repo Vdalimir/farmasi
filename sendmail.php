@@ -4,21 +4,17 @@ if(isset($_POST['start_reg'])){
     $userMail = $_POST['user_mail'];
     $userPhone = $_POST['user_phone'];
 
-    echo "<h1>".$firstName. " + " . $userMail."</h1>";
-    /*$mailTo = "info@ua-farmasi.com, vladimir.hrinin@gmail.com";
+    $mailTo = "info@ua-farmasi.com, vladimir.hrinin@gmail.com";
     $subject = "Заявка на консультацию";
     $message = $firstName . " оставил сообщение: Хочу получить консультацию.\r\nМой номер ".$userPhone." , \r\nи моя почта ".$userMail;
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-    $headers .= 'From: INVEST-TG <info@invest-tg.com>';
+    $headers .= 'From: UA-FARMASI <info@ua-farmasi.com>';
 
 
     if(mail($mailTo,$subject,$message, $headers)){
         echo "Письмо отправлено";
     }else {
         echo "Письмо не отправлено. качай дальше";
-    }*/
-}
-else{
-    echo "Balda";
+    }
 }
