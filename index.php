@@ -1,5 +1,6 @@
 <?php
-
+include 'db.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,14 +19,15 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <nav class="nav">
     <ul>
         <li><a href="#" class="active">ГЛАВНАЯ</a></li>
-        <li><a href="#">О КОМПАНИИ</a></li>
-        <li><a href="#">АКЦИИ</a></li>
-        <li><a href="#">КАТАЛОГ</a></li>
-        <li><a href="#">МАРКЕТИНГ</a></li>
-        <li><a href="#">КОНТАКТЫ</a></li>
+        <li><a href="#about">О КОМПАНИИ</a></li>
+        <li><a href="#stock">АКЦИИ</a></li>
+        <li><a href="#catalog">КАТАЛОГ</a></li>
+        <li><a href="#marketing">МАРКЕТИНГ</a></li>
+        <li><a href="#contacts">КОНТАКТЫ</a></li>
     </ul>
 
     <div class="burger">
@@ -34,7 +36,7 @@
         <div class="line3"></div>
     </div>
     <div class="nav-reg">
-        <a href="#" class="link-reg">РЕГИСТРАЦИЯ</a>
+        <a href="#registration" class="link-reg">РЕГИСТРАЦИЯ</a>
     </div>
 </nav>
 
@@ -56,7 +58,7 @@
         </div>
     </div>
 </header>
-<section class="about">
+<section id="about" class="about">
     <h1>
         О КОМПАНИИ
     </h1>
@@ -153,7 +155,7 @@
         </div>
     </div>
 </section>
-<section class="stock">
+<section id="stock"class="stock">
     <div class="container">
         <div class="text-center">
             <h1>АКЦИЯ</h1>
@@ -172,7 +174,7 @@
                     <br>
                     <br>
                     <span>Подарки 4 месяца подряд.</span>
-                    <a href="#">Быстрая регистрация</a>
+                    <a href="#registration">Быстрая регистрация</a>
                 </p>
             </div>
             <div class="stock-images">
@@ -195,7 +197,7 @@
         </div>
     </div>
 </section>
-<section class="catalog">
+<section id="catalog"class="catalog">
 
     <div id="catalog-scene" class="catalog-scene">
         <div id="scrollimg1">
@@ -219,7 +221,7 @@
         </div>
     </div>
 </section>
-<section class="marketing">
+<section id="marketing"class="marketing">
     <div id="marketing-scene">
         <div data-depth="1">
             <img src="img/cubes.png" alt=""/>
@@ -244,7 +246,7 @@
         </div>
     </div>
 </section>
-<section class="registration">
+<section id="registration"class="registration">
     <div class="container-fluid">
         <div class="block-reg">
 
@@ -253,7 +255,7 @@
             </div>
             <div class="header-reg">
                 <h1>РЕГИСТРАЦИЯ</h1>
-                <p class="mt-20">ПОЛУЧИ СКИКУ УЖЕ СЕГОДНЯ В 1 КЛИК!</p>
+                <p class="mt-20">ПОЛУЧИ СКИДКУ УЖЕ СЕГОДНЯ В 1 КЛИК!</p>
             </div>
             <div class="form-reg">
                 <div></div>
@@ -262,25 +264,25 @@
                     <p class="text-manager mt-20">менеджер онлайн <i class="fad fa-circle text-green"></i></p>
                     <form class="mui-form">
                         <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text">
+                            <input type="text" name="first_name">
                             <label>Ваше имя</label>
                         </div>
                         <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text">
+                            <input type="text" name="user_mail">
                             <label>Email</label>
                         </div>
                         <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text">
+                            <input type="text" name="user_phone">
                             <label>Мобильный номер</label>
                         </div>
-                        <button type="submit" class="mui-btn mui-btn--raised">Отправить заявку<br><span>бесплатно</span></button>
+                        <button type="submit" class="mui-btn mui-btn--raised" name="start_reg">Отправить заявку<br><span>бесплатно</span></button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="contacts">
+<section id="contacts"class="contacts">
     <div class="contact-header text-center">
         <h1>СВЯЖИТЕСЬ С НАМИ</h1>
         <p class="text-red mt-20">остались вопросы?</p>
@@ -325,6 +327,7 @@
 <footer>
     <p class="text-center">2019 © Сайт представителя компании Farmasi Украина</p>
 </footer>
+<a href="#" class="link-to-top"><i class="fad fa-arrow-alt-to-top fa-2x text-red"></i></a>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/mui.min.js"></script>
 <script src="js/jquery.scroolly.min.js"></script>

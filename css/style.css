@@ -5,7 +5,9 @@ body {
     color: white;
     background-color: #212121;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +37,12 @@ body {
 .text-red {
     color: #D22E2C;
 }
-
+.link-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10000;
+}
 section h1 {
     font-family: 'Oranienbaum', serif;
     text-shadow: black 1px 3px 6px;
@@ -116,6 +123,7 @@ nav {
 }
 
 .nav.active {
+    position: fixed;
     height: 100%;
 }
 
@@ -241,6 +249,7 @@ section.about {
     width: 100%;
     padding-top: 100px;
     margin-top: 50px;
+    scroll-behavior: smooth;
 }
 
 section.about h1 {
