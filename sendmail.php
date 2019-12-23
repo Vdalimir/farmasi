@@ -15,6 +15,6 @@ if(isset($_POST['start_reg'])){
     if(mail($mailTo,$subject,$message, $headers)){
         echo "Письмо отправлено";
     }else {
-        echo "Письмо не отправлено";
+        echo "Письмо не отправлено. качай дальше";
     }
 }
