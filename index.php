@@ -1,6 +1,25 @@
 <?php
 include 'db.php';
 session_start();
+if(isset($_POST['start_reg'])){
+    $firstName = $_POST['first_name'];
+    $userMail = $_POST['user_mail'];
+    $userPhone = $_POST['user_phone'];
+
+    $mailTo = "info@ua-farmasi.com, vladimir.hrinin@gmail.com";
+    $subject = "Заявка на консультацию";
+    $message = $firstName . " оставил сообщение: Хочу получить консультацию.\r\nМой номер ".$userPhone." , \r\nи моя почта ".$userMail;
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+    $headers .= 'From: INVEST-TG <info@invest-tg.com>';
+
+
+    if(mail($mailTo,$subject,$message, $headers)){
+        echo "<h1>Письмо отправлено</h1>";
+    }else {
+        echo "Письмо не отправлено. качай дальше";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -262,7 +281,7 @@ session_start();
                 <div class="block-form">
                     <p class="text-reg">Быстрая регистрация</p>
                     <p class="text-manager mt-20">менеджер онлайн <i class="fad fa-circle text-green"></i></p>
-                    <form class="mui-form" action="sendmail.php">
+                    <form class="mui-form" action="index.php">
                         <div class="mui-textfield mui-textfield--float-label">
                             <input type="text" name="first_name">
                             <label>Ваше имя</label>
