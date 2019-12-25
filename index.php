@@ -28,6 +28,11 @@ session_start();
         <li><a href="#catalog">КАТАЛОГ</a></li>
         <li><a href="#marketing">МАРКЕТИНГ</a></li>
         <li><a href="#contacts">КОНТАКТЫ</a></li>
+        <?php
+        if (isset($_SESSION['loggedIn'])) {
+            echo "<li><a href='adminpage.php'>АДМИН ПАНЕЛЬ</a></li>";
+        }
+        ?>
     </ul>
 
     <div class="burger">
@@ -168,14 +173,41 @@ session_start();
                 <img src="img/stockabstr.png" alt=""/>
             </div>
             <div class="stock-text">
-                <p>Постоянные действующие акции
+                <div>Постоянные действующие акции
                     для тех, кто только
                     зарегистрировался.
                     <br>
+                    <div class="view-stock-img mt-10">
+                        <p id="view-stock-img">Просмотр акции <i class="fad fa-eye"></i> </p>
+                        <div class="view-img">
+                            <div class="container p-0">
+                                <span id="close-stock" class="text-red mt-20"><i class="fad fa-times text-red"></i></span>
+                                <div class="images">
+                                    <?php
+                                    $sql = "SELECT * FROM stock";
+
+                                    $res = mysqli_query($link, $sql);
+                                    if (mysqli_num_rows($res) != 0) {
+                                        $row = mysqli_fetch_assoc($res);
+                                        echo "
+                                          <img src='".$row['img_url_1']."'/>
+                                          <img src='".$row['img_url_2']."'/>
+                                              ";
+                                    } else {
+                                        echo 'Ошибка запроса: ' . mysqli_error($link);
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                     <br>
                     <span>Подарки 4 месяца подряд.</span>
                     <a href="#registration">Быстрая регистрация</a>
-                </p>
+
+                </div>
+
             </div>
             <div class="stock-images">
                 <div class="text-center" id="stock-scene">
@@ -191,7 +223,6 @@ session_start();
                     <div data-depth="1" class="stock-img img3">
                         <img src="img/glam.png" alt=""/>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -215,8 +246,19 @@ session_start();
         <div class="catalog-block text-center">
             <div class="img-catalog">
                 <p>обновления каждый месяц</p>
-                <img src="img/001.jpg" alt=""/>
-                <a href="#" class="downloadCat">скачать PDF файл</a>
+                <?php
+                $sql_cat = "SELECT * FROM catalog";
+
+                $res_cat = mysqli_query($link, $sql_cat);
+                if (mysqli_num_rows($res_cat) != 0) {
+                    $row_cat = mysqli_fetch_assoc($res_cat);
+                    echo "<img src='".$row_cat['img_dir']."'/>
+                    <a href='".$row_cat['download_url']."' target='_blank' class='downloadCat'>скачать PDF файл</a>";
+                } else {
+                    echo 'Ошибка запроса: ' . mysqli_error($link);
+                }
+                ?>
+
             </div>
         </div>
     </div>
@@ -311,8 +353,19 @@ session_start();
         <div class="contacts-item">
             <div class="item">
                 <p>Позвоните нам</p>
-                <a href="#">+380666753454</a>
-                <a href="#">+380975359047</a>
+                <?php
+                $sql_phone = "SELECT * FROM phone_numbers";
+
+                $res_phone = mysqli_query($link, $sql_phone);
+
+                if (mysqli_num_rows($res_phone) != 0) {
+                    while($row_phone = mysqli_fetch_assoc($res_phone)){
+                        echo "<a href='tel:".$row_phone['phone']."'>".$row_phone['phone']."</a>";
+                    }
+                } else {
+                    echo 'Ошибка запроса: ' . mysqli_error($link);
+                }
+                ?>
             </div>
             <div class="item">
                 <p>Напишите нам</p>
