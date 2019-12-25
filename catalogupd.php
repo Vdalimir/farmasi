@@ -32,12 +32,12 @@ if (isset($_POST["updateCat"])) {
                 && ($check[2] !== IMAGETYPE_PNG)) {
                 $error = "Файл не является иображением (возможные форматы JPEG, PNG, GIF, BMP)";
                 $_SESSION['error_cat'] = $error;
-                header("location: adminpage.php");
+                header("location: adminpage.php#view-catalog");
             }
         } else {
             $error = "Файл пуст или не является иображением (возможные форматы JPEG, PNG, GIF, BMP)";
             $_SESSION['error_cat'] = $error;
-            header("location: adminpage.php");
+            header("location: adminpage.php#view-catalog");
         }
 
         if (empty($error)) {
@@ -48,16 +48,16 @@ if (isset($_POST["updateCat"])) {
                     unlink($_POST['img_dir']);
                     move_uploaded_file($_FILES['file']['tmp_name'], $target_file);
                     $_SESSION['result_cat'] = "Каталог успешно обновлён";
-                    header("location: adminpage.php");
+                    header("location: adminpage.php#view-catalog");
                 } else {
                     $error = "Error: " . $sql_cat . "<br>" . $link->error;
                     $_SESSION['error_cat'] = $error;
-                    header("location: adminpage.php");
+                    header("location: adminpage.php#view-catalog");
                 }
             } else {
                 $error = "Заполните все поля";
                 $_SESSION['error_cat'] = $error;
-                header("location: adminpage.php");
+                header("location: adminpage.php#view-catalog");
             }
         }
     } else {
@@ -66,16 +66,16 @@ if (isset($_POST["updateCat"])) {
 
             if ($link->query($sql_cat) === TRUE) {
                 $_SESSION['result_cat'] = "Каталог успешно обновлён";
-                header("location: adminpage.php");
+                header("location: adminpage.php#view-catalog");
             } else {
                 $error = "Error: " . $sql_cat . "<br>" . $link->error;
                 $_SESSION['error_cat'] = $error;
-                header("location: adminpage.php");
+                header("location: adminpage.php#view-catalog");
             }
         } else {
             $error = "Заполните все поля";
             $_SESSION['error_cat'] = $error;
-            header("location: adminpage.php");
+            header("location: adminpage.php#view-catalog");
         }
     }
 }

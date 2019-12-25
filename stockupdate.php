@@ -44,12 +44,12 @@ if (isset($_POST["updateStock"])) {
                 && ($check[2] !== IMAGETYPE_PNG)) {
                 $error = "Файл не является иображением (возможные форматы JPEG, PNG, GIF, BMP)";
                 $_SESSION['error_stock'] = $error;
-                header("location: adminpage.php");
+                header("location: adminpage.php#view-stock");
             }
         } else {
             $error = "Файл пуст или не является иображением (возможные форматы JPEG, PNG, GIF, BMP)";
             $_SESSION['error_stock'] = $error;
-            header("location: adminpage.php");
+            header("location: adminpage.php#view-stock");
         }
         $check2 = getimagesize($_FILES["file_2"]["tmp_name"]);
         if ($check2 !== false) {
@@ -58,12 +58,12 @@ if (isset($_POST["updateStock"])) {
                 && ($check2[2] !== IMAGETYPE_PNG)) {
                 $error = "Файл не является иображением (возможные форматы JPEG, PNG, GIF, BMP)";
                 $_SESSION['error_stock'] = $error;
-                header("location: adminpage.php");
+                header("location: adminpage.php#view-stock");
             }
         } else {
             $error = "Файл пуст или не является иображением (возможные форматы JPEG, PNG, GIF, BMP)";
             $_SESSION['error_stock'] = $error;
-            header("location: adminpage.php");
+            header("location: adminpage.ph#view-stockp");
         }
 
         if (empty($error)) {
@@ -76,16 +76,16 @@ if (isset($_POST["updateStock"])) {
                     move_uploaded_file($_FILES['file_1']['tmp_name'], $target_file_1);
                     move_uploaded_file($_FILES['file_2']['tmp_name'], $target_file_2);
                     $_SESSION['result_stock'] = "Акция успешно обновлена";
-                    header("location: adminpage.php");
+                    header("location: adminpage.php#view-stock");
                 } else {
                     $error = "Error: " . $sql_stock . "<br>" . $link->error;
                     $_SESSION['error_stock'] = $error;
-                    header("location: adminpage.php");
+                    header("location: adminpage.php#view-stock");
                 }
             } else {
                 $error = "Заполните все поля";
                 $_SESSION['error_stock'] = $error;
-                header("location: adminpage.php");
+                header("location: adminpage.php#view-stock");
             }
         }
     } else {
@@ -93,17 +93,17 @@ if (isset($_POST["updateStock"])) {
             $sql_stock = "UPDATE stock SET name = '$stock_name' WHERE id = '$id'";
 
             if ($link->query($sql_stock) === TRUE) {
-                $_SESSION['result_stock'] = "Новость успешно обновлена";
-                header("location: adminpage.php");
+                $_SESSION['result_stock'] = "Акция успешно обновлена";
+                header("location: adminpage.php#view-stock");
             } else {
                 $error = "Error: " . $sql_stock . "<br>" . $link->error;
                 $_SESSION['error_stock'] = $error;
-                header("location: adminpage.php");
+                header("location: adminpage.php#view-stock");
             }
         } else {
             $error = "Заполните все поля";
             $_SESSION['error_stock'] = $error;
-            header("location: adminpage.php");
+            header("location: adminpage.php#view-stock");
         }
     }
 }

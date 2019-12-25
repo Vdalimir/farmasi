@@ -54,7 +54,7 @@ if ($_SESSION["loggedIn"] != true) {
         <br>
         <a class="btn-login" href="logout.php">Выйти</a>
 
-        <div class="view-stock">
+        <div class="view-stock" id="view-stock">
             <h2>Акция</h2>
             <?php
             if (isset($_SESSION['result_stock'])) {
@@ -100,7 +100,7 @@ if ($_SESSION["loggedIn"] != true) {
             ?>
 
         </div>
-        <div class="view-catalog mt-30">
+        <div class="view-catalog mt-30" id="view-catalog">
             <h2>Каталог</h2>
             <?php
             if (isset($_SESSION['result_cat'])) {
@@ -138,7 +138,7 @@ if ($_SESSION["loggedIn"] != true) {
             }
             ?>
         </div>
-        <div class="view-phones mt-30">
+        <div class="view-phones mt-30" id="view-phone-numbers">
             <h2>Номера</h2>
             <?php
             if (isset($_SESSION['result_phone'])) {

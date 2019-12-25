@@ -12,15 +12,15 @@ if (isset($_POST["updatePhone"])) {
 
         if ($link->query($sql_phone) === TRUE) {
             $_SESSION['result_phone'] = "Номер успешно обновлён";
-            header("location: adminpage.php");
+            header("location: adminpage.php#view-phone-numbers");
         } else {
             $error = "Error: " . $sql_phone . "<br>" . $link->error;
             $_SESSION['error_phone'] = $error;
-            header("location: adminpage.php");
+            header("location: adminpage.php#view-phone-numbers");
         }
     } else {
         $error = "Номер не может быть пустым";
         $_SESSION['error_phone'] = $error;
-        header("location: adminpage.php");
+        header("location: adminpage.php#view-phone-numbers");
     }
 }

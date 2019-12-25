@@ -11,16 +11,16 @@ if (isset($_POST["addPhone"])) {
 
         if ($link->query($sql_phone) === TRUE) {
             $_SESSION['result_addphone'] = "Номер успешно добавлен";
-            header("location: adminpage.php");
+            header("location: adminpage.php#view-phone-numbers");
         } else {
             $error = "Error: " . $sql_phone . "<br>" . $link->error;
             $_SESSION['error_addphone'] = $error;
-            header("location: adminpage.php");
+            header("location: adminpage.php#view-phone-numbers");
         }
     } else {
         $error = "Номер не может быть пустым";
         $_SESSION['error_addphone'] = $error;
-        header("location: adminpage.php");
+        header("location: adminpage.php#view-phone-numbers");
     }
 }
 
