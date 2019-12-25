@@ -47,6 +47,13 @@ $( document ).ready(function() {
     $('#close-stock').click( function () {
         $('.view-img').toggleClass('active');
     });
+
+    $('#open_marketing').click( function () {
+        $('.view-marketing').toggleClass('active');
+    });
+    $('#close-marketing').click( function () {
+        $('.view-marketing').toggleClass('active');
+    });
     $('#user_phone').mask('+00 (000) 000 00 00', {placeholder: "+__ (___) ___ __ __"});
 
     $.extend( $.validator.messages, {

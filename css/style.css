@@ -534,6 +534,37 @@ section.about h1:before {
 #marketing-scene img{
     width: 50%;
 }
+.view-marketing {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 33, 33, 0.9);
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    transition: all 1s;
+    overflow-y: auto;
+    z-index: 10000;
+}
+.view-marketing.active {
+    display: block;
+}
+#open_marketing {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#open_marketing:hover {
+    cursor: pointer;
+}
+#close-marketing:hover {
+    cursor: pointer;
+}
+.view-marketing img{
+    width: 100%;
+    margin-top: 20px;
+}
 
 /* REGISTRATION */
 .registration {

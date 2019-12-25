@@ -181,7 +181,7 @@ session_start();
                         <p id="view-stock-img">Просмотр акции <i class="fad fa-eye"></i> </p>
                         <div class="view-img">
                             <div class="container p-0">
-                                <span id="close-stock" class="text-red mt-20"><i class="fad fa-times text-red"></i></span>
+                                <span id="close-stock" class="text-red mt-20"><i class="fad fa-times fa-2x text-red"></i></span>
                                 <div class="images">
                                     <?php
                                     $sql = "SELECT * FROM stock";
@@ -278,12 +278,18 @@ session_start();
             <div class="marketing-image">
                 <img src="img/imgmarketing.jpg" alt=""/>
             </div>
+            <div class="view-marketing">
+                <div class="container p-0">
+                    <span id="close-marketing" class="text-red mt-20"><i class="fad fa-times fa-2x text-red"></i></span>
+                    <img src="img/farmasi-mp2.jpg">
+                </div>
+            </div>
             <div class="marketing-block-text">
                 <h2>СКИДКА КОНСУЛЬТАНТА</h2>
                 <p>Зарегистрируйся в компании и сразу получай максимальные скидки на всю продукцию
                 </p>
                 <p>до <span>30%</span></p>
-                <div class="marketing-link">нажмите что бы посмотреть <a href="#">маркетинг план</a></div>
+                <div class="marketing-link">нажмите что бы посмотреть <a id="open_marketing">маркетинг план</a></div>
             </div>
         </div>
     </div>
