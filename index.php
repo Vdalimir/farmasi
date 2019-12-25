@@ -375,8 +375,8 @@ session_start();
             </div>
             <div class="item">
                 <p>Напишите нам</p>
-                <a href="#">info@farmasi.com</a>
-                <a href="#">ofisfarmasikariuk@gmail.com</a>
+                <a href="mailto:info@farmasi.com">info@farmasi.com</a>
+                <a href="mailto:ofisfarmasikariuk@gmail.com">ofisfarmasikariuk@gmail.com</a>
             </div>
             <div class="item">
                 <p>Найдите нас</p>
@@ -387,16 +387,31 @@ session_start();
             </div>
             <div class="social-item">
                 <div class="item">
-                    <a href="#"><i class="fab fa-telegram-plane fa-2x"></i></a>
+                    <a href="tg://resolve?domain=yuliakaryuk"><i class="fab fa-telegram-plane fa-2x"></i></a>
                 </div>
                 <div class="item">
-                    <a href="#"><i class="fab fa-viber fa-2x"></i></a>
+                    <?php
+                    function check_mobile_device() {
+                        $mobile_agent_array = array('ipad', 'iphone', 'android', 'pocket', 'palm', 'windows ce', 'windowsce', 'cellphone', 'opera mobi', 'ipod', 'small', 'sharp', 'sonyericsson', 'symbian', 'opera mini', 'nokia', 'htc_', 'samsung', 'motorola', 'smartphone', 'blackberry', 'playstation portable', 'tablet browser');
+                        $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
+                        foreach ($mobile_agent_array as $value) {
+                            if (strpos($agent, $value) !== false) return true;
+                        };
+                        return false;
+                    };
+                    ?>
+                    <? if(check_mobile_device()) :?>
+                        <a href="viber://add?number=380666753454"><i class="fab fa-viber fa-2x"></i></a>
+                    <? else : ?>
+                        <a title="Должен быть устоновлен Viber для ПК" href="viber://chat?number=+380666753454"><i class="fab fa-viber fa-2x"></i></a>
+                    <? endif; ?>
+
                 </div>
                 <div class="item">
-                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="instagram.com/sergeevna_juliia" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                 </div>
                 <div class="item">
-                    <a href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+                    <a href="https://www.facebook.com/yuliafarmasi.05" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
                 </div>
             </div>
         </div>
