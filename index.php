@@ -408,7 +408,7 @@ session_start();
 
                 </div>
                 <div class="item">
-                    <a href="instagram.com/sergeevna_juliia" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://instagram.com/sergeevna_juliia" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                 </div>
                 <div class="item">
                     <a href="https://www.facebook.com/yuliafarmasi.05" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
