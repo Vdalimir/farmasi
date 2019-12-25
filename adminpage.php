@@ -138,8 +138,55 @@ if ($_SESSION["loggedIn"] != true) {
             }
             ?>
         </div>
-        <div class="view-phones">
+        <div class="view-phones mt-30">
             <h2>Номера</h2>
+            <?php
+            if (isset($_SESSION['result_phone'])) {
+                echo "<p class='notify'>" . $_SESSION['result_phone'] . "</p>";
+                unset($_SESSION['result_phone']);
+            }
+            ?>
+            <?php if (isset($_SESSION['error_phone'])) echo "<span class='error'>".$_SESSION['error_phone']."</span>"; unset($_SESSION['error_phone']);?>
+            <?php
+            $sql_phone = "SELECT * FROM phone_numbers";
+
+            $res_phone = mysqli_query($link, $sql_phone);
+            if (mysqli_num_rows($res_phone) != 0) {
+                $index = 0;
+                while ($row_phone = mysqli_fetch_assoc($res_phone)){
+                    $index ++;
+                    echo "<form class='mui-form form-stock' enctype='multipart/form-data' method='post' action='phoneupd.php'>
+                <input type='hidden' name='id' value='".$row_phone['id']."'/>
+               
+                <div class='mui-textfield mui-textfield--float-label'>
+                    <input type='text' name='phone' value='" . $row_phone['phone'] . "' required>
+                    <label>Номер ".$index."</label>
+                </div>
+                <button type='submit' name='updatePhone' class='mui-btn mui-btn--raised' style='margin: unset'>Обновить</button>
+                <a class='mui-btn del_phone_number' id='".$row_phone['id']."'>Удалить</a>
+                </form>";
+                }
+            } else {
+                echo 'Ошибка запроса: ' . mysqli_error($link);
+            }
+            ?>
+
+            <?php
+            if (isset($_SESSION['result_addphone'])) {
+            echo "<p class='notify'>" . $_SESSION['result_addphone'] . "</p>";
+            unset($_SESSION['result_addphone']);
+            }
+            ?>
+            <?php if (isset($_SESSION['error_addphone'])) echo "<span class='error'>".$_SESSION['error_addphone']."</span>"; unset($_SESSION['error_addphone']);?>
+            <form class='mui-form form-stock' enctype='multipart/form-data' method='post' action='addphonenumber.php'>
+
+                <legend>Добавить номер</legend>
+                <div class='mui-textfield mui-textfield--float-label'>
+                    <input type='text' name='phone' required>
+                    <label>Номер</label>
+                </div>
+                <button type='submit' name='addPhone' class='mui-btn mui-btn--raised' style='margin: unset'>Добавить</button>
+            </form>
         </div>
     </div>
 </div>

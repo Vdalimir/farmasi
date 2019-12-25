@@ -116,6 +116,26 @@ $( document ).ready(function() {
             }
         });
     });
+
+    $('.del_phone_number').click( function () {
+        var $del_id = $(this).attr('id');
+        $.ajax({
+            type:'POST',
+            url:'addphonenumber.php',
+            data: {delete_id: $del_id},
+            success: function(data){
+                if(data === '1'){
+                    $('.del_phone_number').each(function () {
+                        if($(this).attr('id') === $del_id){
+                            $(this).closest('form').fadeOut();
+                        }
+                    });
+                }
+                else alert("Запись не удалена. Обратитесь к админу +380660668090");
+            }
+        });
+    });
+
 });
 'use strict';
 ( function( $, window, document, undefined )

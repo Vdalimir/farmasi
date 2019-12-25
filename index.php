@@ -363,7 +363,7 @@ session_start();
                         echo "<a href='tel:".$row_phone['phone']."'>".$row_phone['phone']."</a>";
                     }
                 } else {
-                    echo 'Ошибка запроса: ' . mysqli_error($link);
+                    echo '<p>Номеров пока что нет</p>';
                 }
                 ?>
             </div>
