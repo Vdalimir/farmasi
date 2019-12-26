@@ -319,6 +319,10 @@ session_start();
                             <input type="email" id="user_mail" name="user_mail" required>
                             <label>Email</label>
                         </div>
+                        <div class="mui-textfield mui-textfield--float-label mt-30">
+                            <input type="text" id="user_city" name="user_city" required>
+                            <label>Город</label>
+                        </div>
                         <div class="mui-textfield mt-30">
                             <input type="text" id="user_phone" name="user_phone" required>
                             <label>Мобильный номер</label>

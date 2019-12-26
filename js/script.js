@@ -78,6 +78,10 @@ $( document ).ready(function() {
                 required: true,  // <-- redundant
                 email: true     // <-- redundant
             },
+            user_city: {
+                required: true,  // <-- redundant
+                email: true     // <-- redundant
+            },
             user_phone: {
                 required: true,
                 minlength: 10
@@ -95,13 +99,14 @@ $( document ).ready(function() {
     $('#start_registration').click( function () {
         var firstName = $('#first_name').val();
         var userMail = $('#user_mail').val();
+        var userCity = $('#user_city').val();
         var phoneNumber = $('#user_phone').val();
         $('.form-send-preload').fadeIn(100);
         $.ajax({
             type: 'POST',
             url: 'sendmail.php',
             data: {first_name: firstName, user_mail: userMail,
-                user_phone: phoneNumber},
+                user_city: userCity, user_phone: phoneNumber},
             success: function (data) {
                 if (data === "1"){
                     $('.form-send-preload').fadeOut(100);
@@ -110,6 +115,7 @@ $( document ).ready(function() {
                 } else {
                     $('#first_name').val("");
                     $('#user_email').val("");
+                    $('#user_city').val("");
                     $('#user_phone').val("");
                     $('.form-send-preload').fadeOut(100);
                     $('.mui-form').fadeOut(100);
