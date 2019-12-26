@@ -673,6 +673,12 @@ label#first_name-error.error{
     line-height: inherit;
     font-size: 12px;
 }
+label#user_city-error.error{
+    top: -20px;
+    padding: 2px;
+    line-height: inherit;
+    font-size: 12px;
+}
 label#user_phone-error.error{
     top: -20px;
     padding: 2px;
