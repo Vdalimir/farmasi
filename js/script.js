@@ -80,7 +80,6 @@ $( document ).ready(function() {
             },
             user_city: {
                 required: true,  // <-- redundant
-                email: true     // <-- redundant
             },
             user_phone: {
                 required: true,
