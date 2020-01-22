@@ -379,15 +379,7 @@ session_start();
             </div>
             <div class="item">
                 <p>Напишите нам</p>
-                <a href="mailto:info@farmasi.com">info@farmasi.com</a>
                 <a href="mailto:ofisfarmasikariuk@gmail.com">ofisfarmasikariuk@gmail.com</a>
-            </div>
-            <div class="item">
-                <p>Найдите нас</p>
-                <a href="#">
-                    Полтава, Украина
-                    <br>ул. Черновола, дом 20
-                </a>
             </div>
             <div class="social-item">
                 <div class="item">

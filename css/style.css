@@ -728,7 +728,7 @@ label#user_phone-error.error{
     width: 80%;
     background-color: rgba(210, 46, 44, 0.9);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));;
     padding: 100px 20px;
 }
 .contacts-item .item {
