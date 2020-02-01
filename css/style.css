@@ -719,10 +719,37 @@ label#user_phone-error.error{
 .contacts {
     margin-top: 150px;
 }
+.policy {
+    margin-top: 130px;
+}
 .contacts-block {
     padding: 100px 0;
     margin-top: 100px;
     background: url("../img/contacts.jpg") no-repeat right center;
+}
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+}
+ol {
+    list-style: none;
+    counter-reset: li;
+}
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 .contacts-item {
     width: 80%;
