@@ -56,7 +56,6 @@ if (isset($_POST['first_name'])) {
 Имя - <strong>$firstName</strong>
 Город - <strong>$userCity</strong>
 Мобильный <a href='tel:$userPhone'>$userPhone</a>
-</pre>",
-        "asd");
+</pre>");
 
 }
