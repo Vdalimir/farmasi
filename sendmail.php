@@ -56,6 +56,7 @@ if (isset($_POST['first_name'])) {
 
 }
 if(isset($_POST)){
-    $data = json_decode( file_get_contents( 'php://input' ), true );
-    $bot->sendMEssage(450790032, "Тест гугл -ключ $data");
+    $data = json_decode(file_get_contents('php://input'), true);
+
+    $bot->sendMEssage(450790032, "Тест гугл -ключ --".$data);
 }
