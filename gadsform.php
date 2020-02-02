@@ -9,7 +9,7 @@ if(isset($_POST)){
 
     if($gkey == $data->google_key){
         $text = "Заявка с гугл формы. Номер телефона ". $data->user_column_data[0]->string_value;
-        $bot->sendMEssage(387529713, $text);
+        $bot->sendMEssage(450790032, $text);
     }
 
 }
