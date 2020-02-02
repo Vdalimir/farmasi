@@ -9,14 +9,7 @@ try {
 
 
     $bot->command('start', function ($message) use ($bot) {
-        $answer = 'Привет! твой чат айди - ' . $message->getChat()->getId();
-        $bot->sendMessage($message->getChat()->getId(), $answer);
-    });
-
-// команда для помощи
-    $bot->command('help', function ($message) use ($bot) {
-        $answer = 'Команды:
-     /help - вывод справки';
+        $answer = 'Привет! меня создали, но я пока что мало чего умею... Заходи ко мне позже и я расскажу чему научился.';
         $bot->sendMessage($message->getChat()->getId(), $answer);
     });
 
@@ -54,7 +47,7 @@ if (isset($_POST['first_name'])) {
         echo false;
     }
 
-    $bot->sendMEssage(450790032, "Новая заявка с сайта
+    $bot->sendMEssage(387529713, "Новая заявка с сайта
 Имя - $firstName
 Город - $userCity
 Мобильный $userPhone
