@@ -313,7 +313,7 @@ session_start();
                     <form class="mui-form" id="form_registration">
                         <div class="mui-textfield mui-textfield--float-label mt-30">
                             <input type="text" id="first_name" name="first_name" required>
-                            <label>Ваше имя</label>
+                            <label>Имя Фамилия</label>
                         </div>
                         <div class="mui-textfield mui-textfield--float-label mt-30">
                             <input type="text" id="user_city" name="user_city" required>
@@ -322,6 +322,10 @@ session_start();
                         <div class="mui-textfield mt-30">
                             <input type="text" id="user_phone" name="user_phone" required>
                             <label>Мобильный номер</label>
+                        </div>
+                        <div class="mui-textfield mui-textfield--float-label">
+                            <textarea name="comment"></textarea>
+                            <label>Коментарий или пожелание</label>
                         </div>
                         <div class="mui-checkbox mui--text-black">
                             <label>
