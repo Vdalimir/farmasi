@@ -253,7 +253,7 @@ session_start();
                 if (mysqli_num_rows($res_cat) != 0) {
                     $row_cat = mysqli_fetch_assoc($res_cat);
                     echo "<img src='".$row_cat['img_dir']."'/>
-                    <a href='".$row_cat['download_url']."' target='_blank' class='downloadCat'>скачать PDF файл</a>";
+                    <a href='".$row_cat['download_url']."' target='_blank' class='downloadCat'>полный обзор в PDF</a>";
                 } else {
                     echo 'Ошибка запроса: ' . mysqli_error($link);
                 }
