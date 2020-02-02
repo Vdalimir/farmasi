@@ -1,7 +1,7 @@
 <?php
 
 
-$token = "969745652:AAEjjUjSNmfFGNCHfa-WAlfMqKolEBYxFko";
+$token = "882116321:AAGX1TWys8Ka9Rlh9WhdAio1QA9v_2yvSVU";
 require_once "vendor/autoload.php";
 
 try {
@@ -18,22 +18,7 @@ try {
         /help - вывод справки';
         $bot->sendMessage($message->getChat()->getId(), $answer);
     });
-    /*$bot->command('bday', function ($message) use ($bot) {
-        $text = $message->getText();
-        $param = str_replace('/bday', '', $text);
-        if (empty($param)) {
-            $answer = 'Вы ничего не написали. Что бы отправить поздравление в начале текста введите команду /bday затем текст.
-        Пример "/bday с др"';
 
-            $bot->sendMessage($message->getChat()->getId(), $answer);
-
-        } else {
-            $user = $message->getFrom();
-            $answer = 'Спасибо большое ' . $user->getFirstName() . '. Еще раз спасибо. Отдуши!';
-            $bot->sendMessage($message->getChat()->getId(), $answer);
-            $bot->sendMessage("@hinrybday", "Поздравление от ".$user->getFirstName()." - ".$text);
-        }
-    });*/
     $bot->on(function ($Update) use ($bot) {
         $message = $Update->getMessage();
         $msg_text = $message->getText();
