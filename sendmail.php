@@ -52,8 +52,9 @@ if(isset($_POST['first_name'])){
         echo false;
     }
 
-    $bot->sendMEssage(450790032, "Заявка с сайта от - $firstName.
-        Город - $userCity.
-        Мобильный - $userPhone");
+    $bot->sendMEssage(450790032, "Новая заявка с сайта.
+    от - $firstName.
+    Город - $userCity.
+    Мобильный  $userPhone");
 
 }
