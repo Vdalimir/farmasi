@@ -52,7 +52,7 @@ if (isset($_POST['first_name'])) {
         echo false;
     }
 
-    $bot->sendMEssage(450790032, null,
+    $bot->sendMEssage(450790032, "",
         "<pre><b>Новая заявка с сайта</b>
 Имя - <strong>$firstName</strong>
 Город - <strong>$userCity</strong>
