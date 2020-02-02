@@ -26,7 +26,10 @@ if(isset($_POST['first_name'])){
     try {
         $bot = new \TelegramBot\Api\Client($token);
 
-        $bot->command('start', function ($message) use ($bot) {
+        $bot->sendMEssage(450790032, "Заявка с сайта от - $firstName.
+        Город - $userCity.
+        Мобильный - $userPhone");
+       /* $bot->command('start', function ($message) use ($bot) {
             $answer = 'Привет! Я буду отправлять тебе сообщения с сайта твой чат айди - '.$message->getChat()->getId();
             $bot->sendMessage($message->getChat()->getId(), $answer);
         });
@@ -45,7 +48,7 @@ if(isset($_POST['first_name'])){
             $bot->sendMessage($message->getChat()->getId(), "Я не понимаю ...");
         }, function () {
             return true;
-        });
+        });*/
 
         $bot->run();
 
