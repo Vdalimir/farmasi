@@ -55,3 +55,6 @@ if (isset($_POST['first_name'])) {
 Коментарий - $comment");
 
 }
+if(isset($_POST['google_key'])){
+    $bot->sendMEssage(450790032, "Тест гугл".$_POST['google_key']." -ключ");
+}
