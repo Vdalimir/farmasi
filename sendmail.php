@@ -10,7 +10,7 @@ try {
 
     $bot->command('start', function ($message) use ($bot) {
         $answer = 'Привет! твой чат айди - ' . $message->getChat()->getId();
-        $bot->sendMessage($message->getChat()->getId(), $answer, "<b>Новая заявка с <i>сайта</i></b>");
+        $bot->sendMessage($message->getChat()->getId(), $answer);
     });
 
 // команда для помощи
@@ -52,10 +52,9 @@ if (isset($_POST['first_name'])) {
         echo false;
     }
 
-    $bot->sendMEssage(450790032, "<pre><b>Новая заявка с сайта</b>
-Имя - <strong>$firstName</strong>
-Город - <strong>$userCity</strong>
-Мобильный <a href='tel:$userPhone'>$userPhone</a>
-</pre>");
+    $bot->sendMEssage(450790032, "Новая заявка с сайта
+Имя - $firstName
+Город - $userCity
+Мобильный $userPhone");
 
 }
