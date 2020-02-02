@@ -316,16 +316,18 @@ session_start();
                             <label>Ваше имя</label>
                         </div>
                         <div class="mui-textfield mui-textfield--float-label mt-30">
-                            <input type="email" id="user_mail" name="user_mail" required>
-                            <label>Email</label>
-                        </div>
-                        <div class="mui-textfield mui-textfield--float-label mt-30">
                             <input type="text" id="user_city" name="user_city" required>
                             <label>Город</label>
                         </div>
                         <div class="mui-textfield mt-30">
                             <input type="text" id="user_phone" name="user_phone" required>
                             <label>Мобильный номер</label>
+                        </div>
+                        <div class="mui-checkbox mui--text-black">
+                            <label>
+                                <input type="checkbox" id="check_policy" name="check_policy" checked>
+                                Согласен с <a href="policy.php">политикой конфиденциальности</a>
+                            </label>
                         </div>
                         <input type="button" id="start_registration"
                                class="mui-btn mui-btn--raised" name="start_registration"

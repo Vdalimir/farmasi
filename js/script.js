@@ -59,7 +59,6 @@ $( document ).ready(function() {
     $.extend( $.validator.messages, {
         required: "Это поле необходимо заполнить.",
         remote: "Пожалуйста, введите правильное значение.",
-        email: "Пожалуйста, введите корректный email.",
         number: "Пожалуйста, введите число.",
         digits: "Пожалуйста, вводите только цифры.",
         maxlength: $.validator.format( "Пожалуйста, введите не больше {0} символов." ),
@@ -74,10 +73,7 @@ $( document ).ready(function() {
             first_name: {
                 required: true
             },
-            user_mail: {
-                required: true,  // <-- redundant
-                email: true     // <-- redundant
-            },
+            check_policy: "required",
             user_city: {
                 required: true,  // <-- redundant
             },
@@ -97,15 +93,14 @@ $( document ).ready(function() {
 
     $('#start_registration').click( function () {
         var firstName = $('#first_name').val();
-        var userMail = $('#user_mail').val();
         var userCity = $('#user_city').val();
         var phoneNumber = $('#user_phone').val();
         $('.form-send-preload').fadeIn(100);
         $.ajax({
             type: 'POST',
             url: 'sendmail.php',
-            data: {first_name: firstName, user_mail: userMail,
-                user_city: userCity, user_phone: phoneNumber},
+            data: {first_name: firstName, user_city: userCity,
+                user_phone: phoneNumber},
             success: function (data) {
                 if (data === "1"){
                     $('.form-send-preload').fadeOut(100);
@@ -113,7 +108,6 @@ $( document ).ready(function() {
                     $('.form-send-success').delay(100).fadeIn(500);
                 } else {
                     $('#first_name').val("");
-                    $('#user_email').val("");
                     $('#user_city').val("");
                     $('#user_phone').val("");
                     $('.form-send-preload').fadeOut(100);
