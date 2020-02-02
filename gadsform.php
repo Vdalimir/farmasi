@@ -3,9 +3,13 @@
 include "sendmail.php";
 require_once "vendor/autoload.php";
 
+$gkey = "gkeyfarmasigkey";
 if(isset($_POST)){
     $data = json_decode(file_get_contents('php://input'));
 
-    $text = "Google key - ". $data->google_key;
-    $bot->sendMEssage(450790032, $text);
+    if($gkey == $data->google_key){
+        $text = "Заявка с гугл формы - ". $data->user_column_data;
+        $bot->sendMEssage(450790032, $text);
+    }
+
 }
