@@ -38,11 +38,12 @@ if (isset($_POST['first_name'])) {
     $firstName = $_POST['first_name'];
     $userCity = $_POST['user_city'];
     $userPhone = $_POST['user_phone'];
+    $target = $_POST['target'];
     $comment = htmlspecialchars($_POST['comment']);
 
     $mailTo = "info@ua-farmasi.com, ofisfarmasikariuk@gmail.com, farmasi_chumak@ukr.net";
     $subject = "Заявка на консультацию";
-    $message = $firstName . " отправил(а) заявку на регистрацию.\r\nМой номер - " . $userPhone . " , Город - " . $userCity . " , Коментарий - ".$comment;
+    $message = $firstName . " отправил(а) заявку на регистрацию.\r\nМой номер - " . $userPhone . " , Город - " . $userCity . ", Цель регистрации - ".$target. " , Коментарий - ".$comment;
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
     $headers .= 'From: UA-FARMASI <info@ua-farmasi.com>';
@@ -53,10 +54,11 @@ if (isset($_POST['first_name'])) {
         echo false;
     }
 
-    $bot->sendMEssage(387529713, "Новая заявка с сайта
+    $bot->sendMEssage(450790032, "Новая заявка с сайта
 Имя - $firstName
 Город - $userCity
 Мобильный $userPhone
+Цель регистрации - $target
 Коментарий - $comment");
 
 }

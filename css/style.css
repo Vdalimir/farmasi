@@ -714,6 +714,9 @@ label#user_phone-error.error{
     display: none;
     justify-content: center;
 }
+.mui-select__menu>div {
+    color: #212121;
+}
 
 /* CONTACTS */
 .contacts {

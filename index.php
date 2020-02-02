@@ -323,8 +323,17 @@ session_start();
                             <input type="text" id="user_phone" name="user_phone" required>
                             <label>Мобильный номер</label>
                         </div>
+                        <div class="mui-select">
+                            <select name="target" id="target">
+                                <option value="Покупать товар со скидкой">Покупать товар со скидкой</option>
+                                <option value="Стать консультантом">Стать консультантом</option>
+                                <option value="Бизнес">Бизнес</option>
+                                <option value="Другоем">Другое</option>
+                            </select>
+                            <label>Цель регистрации</label>
+                        </div>
                         <div class="mui-textfield mui-textfield--float-label">
-                            <textarea name="comment"></textarea>
+                            <textarea name="comment" id="comment"></textarea>
                             <label>Коментарий или пожелание</label>
                         </div>
                         <div class="mui-checkbox mui--text-black">

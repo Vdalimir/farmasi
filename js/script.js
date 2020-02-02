@@ -95,12 +95,14 @@ $( document ).ready(function() {
         var firstName = $('#first_name').val();
         var userCity = $('#user_city').val();
         var phoneNumber = $('#user_phone').val();
+        var target = $('#target').val();
+        var comment = $('#comment').val();
         $('.form-send-preload').fadeIn(100);
         $.ajax({
             type: 'POST',
             url: 'sendmail.php',
             data: {first_name: firstName, user_city: userCity,
-                user_phone: phoneNumber},
+                user_phone: phoneNumber, target: target, comment: comment},
             success: function (data) {
                 if (data === "1"){
                     $('.form-send-preload').fadeOut(100);
@@ -110,6 +112,7 @@ $( document ).ready(function() {
                     $('#first_name').val("");
                     $('#user_city').val("");
                     $('#user_phone').val("");
+                    $('#comment').val("");
                     $('.form-send-preload').fadeOut(100);
                     $('.mui-form').fadeOut(100);
                     $('.form-send-error').delay(100).fadeIn(500);
