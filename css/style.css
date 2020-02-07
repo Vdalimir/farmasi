@@ -427,7 +427,7 @@ section.about h1:before {
 }
 
 .catalog-block {
-    margin-top: 130px;
+    margin-top: 100px;
 }
 
 .img-catalog {
@@ -461,14 +461,19 @@ section.about h1:before {
     transform: translate(-50%, -50%);
 }
 .downloadCat {
-    display: block;
-    float: right;
-    margin-top: 20px;
-    color: #D22E2C;
-    font-size: 18px;
+    display: inline-block;
+    padding: 15px 35px;
+    margin: 20px auto 0 auto;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #D22E2C;
+    color: white;
+}
+.downloadCat:hover {
+    background-color: #ff3331;
 }
 #catalog-scene img {
-    width: 100%;
+    display: block;
 }
 
 /* MARKETING PLAN */

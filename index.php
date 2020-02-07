@@ -230,14 +230,14 @@ session_start();
 </section>
 <section id="catalog" class="catalog">
 
-    <div id="catalog-scene" class="catalog-scene">
+    <!--<div id="catalog-scene" class="catalog-scene">
         <div id="scrollimg1">
-            <img src="img/redline.png" alt=""/>
+            <img src="img/abstract.png" alt=""/>
         </div>
         <div id="scrollimg2">
-            <img src="img/whiteline.png" alt=""/>
+            <img src="img/stockabstr.png" alt=""/>
         </div>
-    </div>
+    </div>-->
     <div class="container">
         <div class="text-center">
             <h1>КАТАЛОГ</h1>
@@ -253,7 +253,7 @@ session_start();
                 if (mysqli_num_rows($res_cat) != 0) {
                     $row_cat = mysqli_fetch_assoc($res_cat);
                     echo "<img src='".$row_cat['img_dir']."'/>
-                    <a href='".$row_cat['download_url']."' target='_blank' class='downloadCat'>полный обзор в PDF</a>";
+                    <a href='".$row_cat['download_url']."' target='_blank' class='downloadCat'>ПОЛНЫЙ ОБЗОР</a>";
                 } else {
                     echo 'Ошибка запроса: ' . mysqli_error($link);
                 }
