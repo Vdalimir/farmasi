@@ -756,6 +756,7 @@ ol {
 }
 .contacts-item {
     width: 80%;
+    margin: 0 auto;
     background-color: rgba(210, 46, 44, 0.9);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));;
