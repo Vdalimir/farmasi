@@ -1,11 +1,11 @@
 <?php
 
 
-$token = "882116321:AAGX1TWys8Ka9Rlh9WhdAio1QA9v_2yvSVU";
+$teletoken = "882116321:AAGX1TWys8Ka9Rlh9WhdAio1QA9v_2yvSVU";
 require_once "vendor/autoload.php";
 
 try {
-    $bot = new \TelegramBot\Api\Client($token);
+    $bot = new \TelegramBot\Api\Client($teletoken);
 
 
     $bot->command('start', function ($message) use ($bot) {
