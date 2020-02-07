@@ -328,7 +328,7 @@ session_start();
                                 <option value="Покупать товар со скидкой">Покупать товар со скидкой</option>
                                 <option value="Стать консультантом">Стать консультантом</option>
                                 <option value="Бизнес">Бизнес</option>
-                                <option value="Другоем">Другое</option>
+                                <option value="Другое">Другое</option>
                             </select>
                             <label>Цель регистрации</label>
                         </div>
